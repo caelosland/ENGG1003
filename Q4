@@ -1,0 +1,94 @@
+"""
+# read data from spreadsheet
+# solve a problem by writing a Python function
+# fit a curve to data (straight line, parabola, cubic)
+# perform numerical integration
+# find one or more roots of an equation using secant and/or bisection method
+"""
+
+##########################################################################################
+# Read data from a spreadsheet
+##########################################################################################
+
+import pandas as pd
+import numpy as np
+
+# import the spreadsheet data
+mid_quiz = pd.read_csv('data.csv')
+# print(mid_quiz.head())      # quick summary of imported data
+
+# extract the Q1 column assigned to me
+my_listQ1 = mid_quiz['dad33f93'].values
+
+sum_outputQ1 = 0
+
+for i in range(0, len(my_listQ1)):
+    sum_outputQ1 = sum_outputQ1 + my_listQ1[i]
+
+print(sum_outputQ1)
+# and to double check outside the for loop
+# print(sum(my_listQ1))
+
+# extract the Q2 column assigned to me
+my_listQ2 = mid_quiz['bdd33be6'].values
+
+minimum = my_listQ2[0]
+# print(my_listQ2[0])
+
+for j in range(0, len(my_listQ2)):
+    if my_listQ2[j] < minimum:
+        minimum = my_listQ2[j]
+
+print(minimum)
+# and to double check outside the for loop
+# print(min(my_listQ2))
+
+# extract the Q3 column assigned to me
+my_listQ3 = mid_quiz['c2db31a0'].values
+
+calculate = 0
+total = 0
+
+
+for k in range(0, len(my_listQ3)):
+    calculate = my_listQ3[k]**2
+    total = calculate + total
+    # print(calculate)
+
+print(total)
+
+##########################################################################################
+# Functions - see assignment 2
+##########################################################################################
+
+
+##########################################################################################
+# Fit a curve to data - linear regression (which lecture?)
+##########################################################################################
+""" 
+Use curve fit function 
+Interpolation - Monday Week 6 lecture
+Regression - Monday Week 10 lecture
+use scipy.optimize.curve_fit
+pip install scipy
+"""
+
+
+##########################################################################################
+# perform numerical integration
+##########################################################################################
+""" 
+See Thursday week 8 lecture notes
+See Monday week 9 lecture notes
+area between x axis and curve
+simpsons, trapezoidal, 'Reimans' sums
+"""
+
+##########################################################################################
+# Find roots of an equation using secant and/or bisection method
+##########################################################################################
+""" 
+See assessed lab 2
+See Monday week 8 lecture notes
+"""
+
