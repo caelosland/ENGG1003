@@ -1,0 +1,95 @@
+# """ For loop example. """
+#
+# import numpy as np
+# import math
+#
+# N = 10
+# x = np.zeros(N)
+# x[0] = 1
+# x[1] = 1.5
+# sum_two = 0
+#
+# for i in range(2, N):
+#     x[i] = 0.2 * x[i-1] + 1.2 * x[i-2]
+#
+#     if 2.0 <= x[i] <= 3.0:
+#         sum_two = sum_two + x[i]
+#
+# print(*x, sep="\n")
+#
+# y = sum(x)
+# print("The sum of all values is: " + str(y))
+#
+# print("The sum of values between 2.0 and 3.0 is: " + str(sum_two))
+#
+#
+# """ While loop example. """
+#
+# import numpy as np
+#
+# N = 10
+# x = np.zeros(N)
+# x[0] = 1
+# i = 1
+# sum_two = 0
+#
+# while i < N:
+#     x[i] = 0.8 * x[i-1] + 1
+#     if 2.0 <= x[i] <= 3.0:
+#         sum_two = sum_two + x[i]
+#     i = i + 1
+#
+#
+# print(*x, sep="\n")
+#
+# y = sum(x)
+# print("The sum of all values is: " + str(y))
+#
+# print("The sum of values between 2.0 and 3.0 is: " + str(sum_two))
+
+
+""" Question from Final Exam laboratory """
+
+N = 5
+S = 0
+
+for i in range(1, N+1):
+    cubed = i**3
+    # print(cubed)
+    S += cubed
+#     print(S)
+# print(S)
+
+
+# N2 = 0
+S2 = 10**6
+# cubed2 = 0
+# while cubed2 < S2:
+#     cubed2 = i**3
+#     N2 = i
+#     i = i+1
+# print(N2)
+
+total = 0
+i = 1
+
+while total < S2:
+    total = total + i**3
+    print(i)
+    print(total)
+    if total < S2:
+        i += 1
+    elif total > S2:
+        i -= 1
+print(i)
+
+
+""" Check result """
+
+cubed2 = 0
+for i in range(1, 45):
+    cubed2 = i**3 + cubed2
+print(cubed2)
+
+
+
